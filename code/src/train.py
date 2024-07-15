@@ -53,7 +53,7 @@ def parse_args():
                         help='if use multi-gpu')
     parser.add_argument('--multi_gpus', type=str, default='False',
                         help='if use multi-gpu')
-    parser.add_argument('--gpu_id', type=int, default=0,
+    parser.add_argument('--gpu_id', type=int, default=1,
                         help='gpu id')
     parser.add_argument('--local_rank', default=-1, type=int,
                         help='node rank for distributed training')
