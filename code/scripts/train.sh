@@ -20,3 +20,4 @@ python /content/GALIP/code/src/train.py \
     --state_epoch $state_epoch \
     --num_workers $num_workers \
     --pretrained_model_path $pretrained_model_path \
+    --gpu_id 0
