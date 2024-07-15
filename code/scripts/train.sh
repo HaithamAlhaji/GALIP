@@ -13,5 +13,5 @@ num_workers=8
 master_port=11266
 stamp=gpu${nodes}MP_${mixed_precision}
 
-python /content/GALIP/code/src/train.py \
+CUDA_LAUNCH_BLOCKING=1 python /content/GALIP/code/src/train.py \
     --cfg $cfg 
