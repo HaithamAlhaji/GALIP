@@ -53,7 +53,7 @@ def parse_args():
                         help='if use multi-gpu')
     parser.add_argument('--multi_gpus', type=str, default='False',
                         help='if use multi-gpu')
-    parser.add_argument('--gpu_id', type=int, default=1,
+    parser.add_argument('--gpu_id', type=int, default=0,
                         help='gpu id')
     parser.add_argument('--local_rank', default=-1, type=int,
                         help='node rank for distributed training')
@@ -87,7 +87,7 @@ def main(args):
     CLIP4trn, CLIP4evl, image_encoder, text_encoder, netG, netD, netC = prepare_models(args)
     print('**************G_paras: ',params_count(netG))
     print('**************D_paras: ',params_count(netD)+params_count(netC))
-    
+
     fixed_img, fixed_sent, fixed_words, fixed_z = get_fix_data(train_dl, valid_dl, text_encoder, args)
 
     if (args.multi_gpus==True) and (get_rank() != 0):
