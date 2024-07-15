@@ -5,7 +5,7 @@ state_epoch=1
 pretrained_model_path='./saved_models/data/model_save_file'
 log_dir='new'
 
-multi_gpus=True
+multi_gpus=False
 mixed_precision=True
 
 nodes=8
