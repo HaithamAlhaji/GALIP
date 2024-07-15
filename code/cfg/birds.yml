@@ -31,5 +31,5 @@ test_interval: 20 #5
 save_interval: 20
 
 sample_times: 12
-npz_path: '../data/birds/npz/bird_val256_FIDK0.npz'
+npz_path: '/content/GALIP/data/birds/npz/bird_val256_FIDK0.npz'
 log_dir: 'new'
