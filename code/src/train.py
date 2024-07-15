@@ -87,7 +87,9 @@ def main(args):
     CLIP4trn, CLIP4evl, image_encoder, text_encoder, netG, netD, netC = prepare_models(args)
     print('**************G_paras: ',params_count(netG))
     print('**************D_paras: ',params_count(netD)+params_count(netC))
+    
     fixed_img, fixed_sent, fixed_words, fixed_z = get_fix_data(train_dl, valid_dl, text_encoder, args)
+
     if (args.multi_gpus==True) and (get_rank() != 0):
         None
     else:
